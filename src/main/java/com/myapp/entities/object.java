@@ -1,15 +1,14 @@
 package com.myapp.entities;
 
-import lombok.AllArgsConstructor; 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class Student {
-private Long id;
-private String name;
-private double note;
+public class object {
+
+	 int id;
+	 String tag;
 }
