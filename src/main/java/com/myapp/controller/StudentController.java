@@ -1,12 +1,13 @@
 package com.myapp.controller;
 
-import java.util.ArrayList;
+import java.util.ArrayList; 
 import java.util.List;
 
 import org.springframework.web.bind.annotation.RestController;
 
-import com.myapp.dao.StudentRepository;
+
 import com.myapp.entities.Student;
+import com.myapp.services.StudentServices;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -22,31 +23,31 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class StudentController {
 	
 	@Autowired
-	StudentRepository sr;
+	StudentServices ss;
 	
 	@GetMapping("student")
 	public List<Student> getallStudent(){
-		return sr.findAll();
+		return ss.getallStudent();
 	}
 	
 	@PostMapping("student")
 	public Student addStudent(@RequestBody Student s) {
-		return sr.save(s);
+		return ss.addStudent(s);
 	}
 	
 	@DeleteMapping("student")
 	public void deleteStudent(@RequestBody Student s) {
-		sr.delete(s);
+		ss.deleteStudent(s);
 	}
 	
 	@DeleteMapping("student/{id}")
 	public void deleteStudent(@PathVariable Long id) {
-		sr.deleteById(id);
+		ss.deleteStudent(id);
 	}
 	
 	@PutMapping("student")
 	public Student updateStudent(@RequestBody Student s) {
-		return sr.save(s);
+		return ss.updateStudent(s);
 	}
 
 }
