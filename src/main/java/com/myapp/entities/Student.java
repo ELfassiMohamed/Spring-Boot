@@ -1,6 +1,6 @@
 package com.myapp.entities;
 
-import jakarta.persistence.Entity;
+import jakarta.persistence.Entity; 
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
 import lombok.AllArgsConstructor; 
