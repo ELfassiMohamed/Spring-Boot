@@ -42,7 +42,7 @@ public class GroupeController {
 	}
 	
 	@PostMapping("{id}/student")
-	public Student addStudentToGroupe(@PathVariable Long id , Student s) {
+	public Student addStudentToGroupe(@PathVariable Long id ,@RequestBody Student s) {
 		return gs.addStudentToGroupe(id, s);
 	}
 	
