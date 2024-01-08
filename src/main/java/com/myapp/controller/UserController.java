@@ -41,13 +41,13 @@ public class UserController {
 		return us.addUser(user);
 	}
 	
-	@PutMapping("edit")
-	public User updateUser(User user) {
-		return us.updateUser(user);
+	@PutMapping("edit/{id}")
+	public User updateUser(@RequestBody User user, @PathVariable Long id) {
+		return us.updateUser(user, id);
 	}
 	
 	@DeleteMapping("delete/{id}")
-	public void deleteuser(@PathVariable Long id) {
-		us.deleteuser(id);
+	public String deleteuser(@PathVariable Long id) {
+		return us.deleteuser(id);
 	}
 }
