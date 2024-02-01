@@ -5,6 +5,7 @@ import java.util.List;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.spring.authproject.entity.Product;
+import com.spring.authproject.entity.ourUsers;
 
 import lombok.Data;
 
@@ -22,6 +23,6 @@ public class ReqRes {
 	private String email;
 	private String role;
 	private String password;
-	private String ourUsers;
+	private ourUsers ourUsers;
 	private List<Product> products;
 }
