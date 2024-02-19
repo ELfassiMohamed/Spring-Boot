@@ -31,7 +31,7 @@ public class AdminUsers {
 
 	    @GetMapping("/user/alone")
 	    public ResponseEntity<Object> userAlone(){
-	        return ResponseEntity.ok("USers alone can access this ApI only");
+	        return ResponseEntity.ok("Only User role can access this API");
 	    }
 
 	    @GetMapping("/adminuser/both")
